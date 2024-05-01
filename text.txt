@@ -5,3 +5,40 @@
  git branch -M main - переименовать ветку в main 
  git remote and origin ... - ссылка на репозиторий
  git push -u origin main - запушить в origin
+
+
+КЛОНИРОВАНИЕ РЕПОЗИТОРИЯ :в консоль ввести -
+git clone " сюда скопровать ссылку репозитория "
+
+ПОЛУЧИТЬ ИЗММЕНЕНИЯ С УДАЛЕННОГО РЕПОЗИТОРИЯ :
+git pull
+ПОСМОТРЕТЬ СДЕЛАННЫЕ КАММИТЫ : 
+git log
+
+/-----------
+
+Файл .gitconfig
+[user]
+    name = login
+    email = email@mail.ru
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[alias]
+    s = status --short
+    l = log --oneline --graph --decorate --all
+    g = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'
+    br = branch
+    co = checkout
+
+/-----------
+
+ОТМЕНА ИЗММЕНЕНИЙ :
+git checkout -- файл в котором надо откатить изменения
+либо 
+git checkout -- . - что бы откатить изменения в олвсех файлах
+
+жестикийй сброс на один коммит назад :
+git reset --hard HEAD^
