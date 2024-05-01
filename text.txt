@@ -1,0 +1,7 @@
+ КОМАНДЫ GIT :
+ git init - инициализация репозитория 
+ git add .  - добавление файлов в репозиторий
+ git commit -m " . . ." - создлание первого коммита
+ git branch -M main - переименовать ветку в main 
+ git remote and origin ... - ссылка на репозиторий
+ git push -u origin main - запушить в origin
